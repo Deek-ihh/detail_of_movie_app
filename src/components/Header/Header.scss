@@ -1,0 +1,66 @@
+@import "../../common/colors.scss";
+
+.header {
+  background-color: $secondary-color;
+  height: 72px;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: $font-primary;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.user-image {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%; // Make the user image circular
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // Ensure the image covers the area without distortion
+    border-radius: 50%; // Ensure the image itself is circular
+  }
+}
+
+.search-bar {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+
+  form {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+
+    button {
+      padding: 0 8px;
+      font-size: 20px;
+      cursor: pointer;
+      height: 38px; // Match the height of the input
+      border: none; // Remove default button border
+      background-color: $font-primary; // Optional: Button background color
+      color: $secondary-color; // Optional: Button text color
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($font-primary, 10%); // Darken button on hover
+      }
+    }
+  }
+
+  input {
+    font-size: 18px;
+    width: 100%;
+    padding: 0 10px;
+    height: 38px;
+    outline: none;
+    border: 1px solid lighten($secondary-color, 10%); // Subtle border for better visibility
+    border-radius: 4px 0 0 4px; // Match button border radius
+  }
+}

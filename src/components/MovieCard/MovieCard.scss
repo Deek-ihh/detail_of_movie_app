@@ -1,0 +1,51 @@
+@import "../../common/colors.scss";
+
+.card-item {
+    background: $secondary-color;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 450px;
+    height: 100%;
+    margin: 10px;
+    border-radius: 8px; // Optional: Adds rounded corners
+    overflow: hidden; // Ensures content stays within card boundaries
+
+    &:hover {
+        transform: scale(1.05); // Reduced scale for a more subtle effect
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); // Added shadow for depth
+    }
+}
+
+.card-top {
+    height: 300px;
+    overflow: hidden; // Ensures image stays within the card bounds
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; // Ensures the image covers the area without distortion
+    }
+}
+
+.card-bottom {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-info {
+    color: $font-primary;
+
+    h4 {
+        font-size: 22px;
+        font-weight: 400;
+        margin-bottom: 10px;
+        line-height: 1.2; // Ensures consistent line height
+    }
+
+    p {
+        font-size: 16px; // Optional: Add styling for the year or additional info
+        color: $font-secondary; // Optional: Use a secondary font color for less important text
+    }
+}
